@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+</head>
+<body>
+
+<div class="container">
+    <form id="myForm">
+        <div class="mb-3">
+            <label for="name" class="label">П.І.Б:</label>
+            <input type="text" id="name" name="name" class="input" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="label">Рік навчання:</label>
+            <div class="control">
+                <label class="radio">
+                    <input type="radio" name="year" value="1"> 1
+                </label>
+                <label class="radio">
+                    <input type="radio" name="year" value="2"> 2
+                </label>
+                <label class="radio">
+                    <input type="radio" name="year" value="3"> 3
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="checkbox">
+                <input type="checkbox" id="goodStudent" name="goodStudent"> Ви добре навчаєтесь?
+            </label>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="label">Номер телефону:</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{10}" class="input" required>
+            <small class="form-text text-muted">Будь ласка, введіть 10 цифр номеру телефону.</small>
+        </div>
+
+        <button type="button" onclick="submitForm()" class="button is-primary">Відправити</button>
+    </form>
+
+    <div class="list-container">
+        <ol id="resultList">
+            <!-- Результати будуть виводитись сюди -->
+        </ol>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
